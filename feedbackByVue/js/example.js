@@ -1,20 +1,34 @@
 var app = new Vue({
-  el: "#todoapp",
-  data: {
-    list: ["test1", "test12", "test13"],
-    inputValue: ""
-    listTest:[
-      
-    ]
-  },
-  methods: {
-    add: function () {
-      this.list.push(this.inputValue);
-    },
-    remove: function (index) {
-      console.log("删除");
-      console.log(index);
-      this.list.splice(index, 1);
-    },
-  },
-})
+    el:"#app",
+    data:{
+        liveThreshold:"100",
+        testThreshold:"60",
+        obj:{
+            start:'',
+            liveIs0:'',
+            liveIs0ToThreshold:'',
+            liveIsThresholdTo130:'',
+            testIs0ToThreshold:'',
+            testIsThresholdTo100:'',
+            testUnSubmit:'',
+            end:'',
+        },
+        list:[
+            {
+                start:'家长你好，跟您反馈一下<姓名>今天的学习情况：',
+                liveIs0:'孩子没有来上直播课，麻烦家长提醒一下孩子及时看回放~',
+                liveIs0ToThreshold:'孩子早上可能来晚了，听课时长是<直播时长>分钟，麻烦家长督促孩子观看回放。',
+                liveIsThresholdTo130:'孩子表现非常好，一共听了<直播时长>分钟的直播课程，继续保持。',
+                testIs0ToThreshold:'然后孩子的作业已经改完了，但是分数不是很理想，可以和我或者赵老师聊一下问题出在哪里。',
+                testIsThresholdTo100:'然后孩子的作业已经改完了，掌握的很不错，分数是<作业分数>分，继续保持~',
+                testUnSubmit:'然后孩子的作业还没有提交，记得提醒孩子完成，我会帮他批改',
+                end:'.报名69折',
+                }
+        ]
+    }
+    methods:{
+      setLive:function(){
+        this.liveThreshold=
+      }
+    }
+  })

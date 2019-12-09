@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <input type="button" value="修改message" @click="setM">
-        <input type="text" v-model="message" @keyup.enter="getM">
+        <input type="text" v-model="message" >
         <h2>{{ message }}</h2>
     </div>
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
@@ -23,9 +23,7 @@
                 message:"黑马程序员"
             },
             methods: {
-                getM:function(){
-                    alert(this.message);
-                },
+
                 setM:function(){
                     this.message ="酷丁鱼";
                 }
